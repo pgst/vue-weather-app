@@ -4,6 +4,7 @@ import { ref } from 'vue';
 const city = ref('');
 const submitForm = () => {
   emits('submit-form', city.value);
+  city.value = '';
 };
 const emits = defineEmits(['submit-form']);
 </script>
